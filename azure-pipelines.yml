@@ -8,13 +8,13 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionId: 'MyServiceConnection'
+  azureServiceConnectionId: 'myServiceConnection'
 
   # Web app name
-  webAppName: 'webapphilal'
+  webAppName: 'mywebapp257411'
 
   # Environment name
-  environmentName: 'CI-CD-UdacityProject'
+  environmentName: 'CI-CD-Pipeline-Project'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
