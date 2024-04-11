@@ -16,7 +16,7 @@ variables:
   webAppName: 'mywebapp257411'
  
   # Environment name
-  environmentName: 'python-flask-webapp'
+  environmentName: 'mywebapp257411'
   # Python version
   pythonVersion: '3.8'
  
