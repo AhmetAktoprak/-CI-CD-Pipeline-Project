@@ -1,56 +1,45 @@
-# Starter pipeline
+# Starter pipeline    
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
-
 trigger:
 - main
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
   azureServiceConnectionId: 'myServiceConnection'
-
+  
   # Web app name
   webAppName: 'mywebapp257411'
 
   # Environment name
-  environmentName: 'CI-CD-Pipeline-Project'
-
+  environmentName: 'mywebapp257411'
+  
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
 
-pool: Default
+pool: myAgentPool
 
 stages:
 - stage: Build
   displayName: Build stage
   jobs:
   - job: BuildJob
-    pool: Default
+    pool: myAgentPool
     steps:    
-    - script: echo Hello, world!
-      displayName: 'Run a one-line script'
-
     - script: |
         python -m pip install --upgrade pip
         pip install setup
         pip install -r requirements.txt
-      displayName: 'Install Python dependencies'
-      workingDirectory: $(projectRoot)
-
-    - script: |
-        sudo apt-get update
-        sudo apt-get install -y zip # Install zip command
-      displayName: 'Install zip'
       workingDirectory: $(projectRoot)
 
     - script: |
         export PATH=$HOME/.local/bin:$PATH
         make install
         make lint
-      displayName: 'Run lint tests'
       workingDirectory: $(projectRoot)
-    
+      displayName: 'Run lint tests'
+
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
@@ -70,16 +59,12 @@ stages:
   condition: succeeded()
   jobs:
   - deployment: DeploymentJob
-    pool: Default
+    pool: myAgentPool
     environment: $(environmentName)
     strategy:
       runOnce:
         deploy:
           steps:
-          - script: |
-              echo Add other tasks to build, test, and deploy your project.
-              echo See https://aka.ms/yaml
-            displayName: 'Run a multi-line script'
 
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App'
