@@ -16,7 +16,7 @@ variables:
   webAppName: 'mywebapp257441'
 
   # Environment name
-  environmentName: 'python-flask-webapp'
+  environmentName: 'mywebapp257441'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
