@@ -43,7 +43,7 @@ stages:
     - script: |
         sudo apt-get update
         sudo apt-get install make
-  displayName: 'Install make'
+      displayName: 'Install make'
 
   
     - task: ArchiveFiles@2
