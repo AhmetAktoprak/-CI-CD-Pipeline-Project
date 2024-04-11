@@ -70,7 +70,7 @@ stages:
   condition: succeeded()
   jobs:
   - deployment: DeploymentJob
-    pool: myAgentPool
+    pool: Default
     environment: $(environmentName)
     strategy:
       runOnce:
