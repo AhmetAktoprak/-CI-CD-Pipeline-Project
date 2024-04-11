@@ -19,14 +19,14 @@ variables:
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
 
-pool: myAgentPool
+pool: Default
 
 stages:
 - stage: Build
   displayName: Build stage
   jobs:
   - job: BuildJob
-    pool: myAgentPool
+    pool: Default
     steps:    
     - script: echo Hello, world!
       displayName: 'Run a one-line script'
