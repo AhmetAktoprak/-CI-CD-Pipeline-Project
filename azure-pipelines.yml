@@ -6,6 +6,8 @@
 trigger:
 - main
 
+pool: myAgentPool
+
 variables:
   # Azure Resource Manager connection created during pipeline creation
   azureServiceConnectionId: 'myServiceConnection'
@@ -14,12 +16,12 @@ variables:
   webAppName: 'mywebapp257441'
 
   # Environment name
-  environmentName: 'mywebapp257441'
+  environmentName: 'python-flask-webapp'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
 
-pool: myAgentPool
+
 
 stages:
 - stage: Build
