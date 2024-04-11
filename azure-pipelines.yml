@@ -5,23 +5,20 @@
 trigger:
 - main
 
-# TODO: Replace the agent pool name
-pool: myAgentPool
-
 variables:
-  # TODO: Replace the service connection name as used in the DevOps project settings
+  # Azure Resource Manager connection created during pipeline creation
   azureServiceConnectionId: 'myServiceConnection'
   
-  # TODO: Specify the value of the existing Web App name
+  # Web app name
   webAppName: 'mywebapp257411'
- 
-  # Environment name
-  environmentName: 'python-flask-webapp'
-  # Python version
-  pythonVersion: '3.8'
 
+  # Environment name
+  environmentName: 'mywebapp257411'
+  
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
+
+pool: myAgentPool
 
 stages:
 - stage: Build
@@ -31,24 +28,20 @@ stages:
     pool: myAgentPool
     steps:    
     - script: |
-        python3.8 -m pip install --upgrade pip
-        python3.8 -m pip install setup
-        python3.8 -m pip install -r requirements.txt
+        python -m pip install --upgrade pip
+        pip install setup
+        pip install -r requirements.txt
       workingDirectory: $(projectRoot)
-      displayName: 'myStep 1'
-    - script: |
-        export PATH=$HOME/.local/bin:$PATH
-        make install
-      workingDirectory: $(projectRoot)
-      displayName: 'myStep 2'
+
     - script: |
         export PATH=$HOME/.local/bin:$PATH
         make install
         make lint
       workingDirectory: $(projectRoot)
-      displayName:  'myStep 3 - Run lint tests'
+      displayName: 'Run lint tests'
+
     - task: ArchiveFiles@2
-      displayName: 'myStep 4 - Archive files'
+      displayName: 'Archive files'
       inputs:
         rootFolderOrFile: '$(projectRoot)'
         includeRootFolder: false
@@ -57,7 +50,7 @@ stages:
         replaceExistingArchive: true
 
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-      displayName: 'myStep 5 - Upload package'
+      displayName: 'Upload package'
       artifact: drop
 
 - stage: Deploy
@@ -67,17 +60,16 @@ stages:
   jobs:
   - deployment: DeploymentJob
     pool: myAgentPool
-     
     environment: $(environmentName)
     strategy:
       runOnce:
         deploy:
           steps:
 
-
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : flask-sklearn'
+            displayName: 'Deploy Azure Web App'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
-              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip 
+              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+              appType: 'webAppLinux'
