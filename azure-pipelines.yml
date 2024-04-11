@@ -32,25 +32,14 @@ stages:
         pip install setup
         pip install -r requirements.txt
       workingDirectory: $(projectRoot)
-    
+
     - script: |
         export PATH=$HOME/.local/bin:$PATH
         make install
         make lint
       workingDirectory: $(projectRoot)
       displayName: 'Run lint tests'
-      
-    - script: |
-        sudo apt-get update
-        sudo apt-get install make
-      displayName: 'Install make'
 
-    - script: |
-        sudo apt-get update
-        sudo apt-get install make
-        make --version  # Check if make is installed and print its version
-      displayName: 'Install make and verify'
-      
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
