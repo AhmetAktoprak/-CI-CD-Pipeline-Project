@@ -11,10 +11,10 @@ variables:
   azureServiceConnectionId: 'myServiceConnection'
 
   # Web app name
-  webAppName: 'webapp257525'
+  webAppName: 'mywebapp257525'
 
   # Environment name
-  environmentName: 'webapp257525'
+  environmentName: 'mywebapp257525'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -82,9 +82,9 @@ stages:
             displayName: 'Run a multi-line script'
 
           - task: AzureWebApp@1
-            #displayName: 'Deploy Azure Web App'
+            displayName: 'Deploy Azure Web App'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
-              #appName: $(webAppName)
+              appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
               appType: 'webAppLinux'
