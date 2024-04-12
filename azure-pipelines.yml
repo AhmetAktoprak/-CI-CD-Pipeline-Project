@@ -10,10 +10,10 @@ variables:
   azureServiceConnectionId: 'myServiceConnection'
   
   # Web app name
-  webAppName: 'mywebapp257441'
+  webAppName: 'mywebapp257525'
 
   # Environment name
-  environmentName: 'mywebapp257441'
+  environmentName: 'mywebapp257525'
   
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
