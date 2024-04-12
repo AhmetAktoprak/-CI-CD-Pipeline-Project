@@ -33,12 +33,10 @@ stages:
         pip install -r requirements.txt
       workingDirectory: $(projectRoot)
 
-    - script: |
-        export PATH=/usr/bin:$PATH
-      displayName: 'Add /usr/bin to PATH'
-      
+    
     - script: |
         export PATH=$HOME/.local/bin:$PATH
+        export PATH=/usr/bin:$PATH
         make install
         make lint
       workingDirectory: $(projectRoot)
