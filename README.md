@@ -12,7 +12,7 @@
 <TODO: Project Plan
 
 * A link to a Trello board for the project
-* A link[https://docs.google.com/spreadsheets/d/1m_9LSaJEdbdkG3M6LbqqFDDpVbcVy23lVbyiAUpTmFk/edit?hl=tr&pli=1#gid=1348135932] to a spreadsheet that includes the original and final project plan>
+* [A link](https://docs.google.com/spreadsheets/d/1m_9LSaJEdbdkG3M6LbqqFDDpVbcVy23lVbyiAUpTmFk/edit?hl=tr&pli=1#gid=1348135932) to a spreadsheet that includes the original and final project plan>
 
 ## Instructions
 
