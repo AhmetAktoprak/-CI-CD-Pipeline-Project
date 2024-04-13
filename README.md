@@ -11,47 +11,61 @@
 ## Project Plan
 <TODO: Project Plan
 
-* A link to a Trello board for the project
+* [A link](https://trello.com/invite/b/14uKHOH7/ATTIbcf85a2df9fd65896c5d727a212c77e42F210F69/ci-cd-project) to a Trello board for the project
 * [A link](https://docs.google.com/spreadsheets/d/1m_9LSaJEdbdkG3M6LbqqFDDpVbcVy23lVbyiAUpTmFk/edit?hl=tr&pli=1#gid=1348135932) to a spreadsheet that includes the original and final project plan>
 
 ## Instructions
 
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
+* Architectural Diagram
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+   ![alt text](file:///C:/Users/Ahmet.Aktoprak/OneDrive%20-%20Shell/Documents/My%20Pictures/Screenshots/Project%20%20Diagram.png)
 
-* Project running on Azure App Service
+when the source code is pushed to Github, the GitHub Action is triggered for testing. In the meantime the Azure Pipeline is triggered for building the application and deplyong it to the Azure App Service.
 
-* Project cloned into Azure Cloud Shell
+## seting up Azure cloud shell:
+ ### 1-Open Azure cloud shell
+ ### 2-Generate a SHH Key and copy it to your Github Account
 
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
-
-* Output of a test run
-
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
-
-* Running Azure App Service from Azure Pipelines automatic deployment
-
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
-
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
 ```
+ssh-keygen -t rsa
+cat ~/.ssh/id_rsa.pub
+```
+the genertaed ssh key should be add to the github account through Account settings then ssh and GPG key 
 
-* Output of streamed log files from deployed application
+ ### 3-Clone the project from Github
+ ![alt text]()
 
-> 
+```
+git clone git@github.com:AhmetAktoprak/CI-CD-Pipeline-Project.git
+```
+### make all 
+ 
+## CI - CD
+### git hub action test 
+ 
+### Project running on Azure App Service
+
+### link My Agent with the VM
+
+
+
+### Successful deploy of the project in Azure Pipelines
+ 
+
+ 
+### Running Azure App Service from Azure Pipelines automatic deployment
+ 
+
+
+ ### locust log 
+
+
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+make it in way that keep it an up to date project, in case someone tried to use it a year later will be able without facing issues 
 
 ## Demo 
 
-<TODO: Add link Screencast on YouTube>
 
 
