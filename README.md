@@ -41,6 +41,9 @@ git clone https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project.git
 ### make all 
  ![alt text](https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project/blob/main/make%20all%20passed.png)
 
+ ### Prediction
+ ![alt text](https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project/blob/main/prediction.png)
+
 ## CI - CD
 ### git hub action test 
  ![alt text](https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project/blob/main/github%20actions.png)
