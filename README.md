@@ -18,7 +18,7 @@
 
 * Architectural Diagram
 
-   ![alt text](file:///C:/Users/Ahmet.Aktoprak/OneDrive%20-%20Shell/Documents/My%20Pictures/Screenshots/Project%20%20Diagram.png)
+   ![alt text](https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project/blob/main/Project%20%20Diagram.png)
 
 when the source code is pushed to Github, the GitHub Action is triggered for testing. In the meantime the Azure Pipeline is triggered for building the application and deplyong it to the Azure App Service.
 
@@ -38,34 +38,3 @@ the genertaed ssh key should be add to the github account through Account settin
 ```
 git clone git@github.com:AhmetAktoprak/CI-CD-Pipeline-Project.git
 ```
-### make all 
- 
-## CI - CD
-### git hub action test 
- 
-### Project running on Azure App Service
-
-### link My Agent with the VM
-
-
-
-### Successful deploy of the project in Azure Pipelines
- 
-
- 
-### Running Azure App Service from Azure Pipelines automatic deployment
- 
-
-
- ### locust log 
-
-
-
-## Enhancements
-
-make it in way that keep it an up to date project, in case someone tried to use it a year later will be able without facing issues 
-
-## Demo 
-
-
-
