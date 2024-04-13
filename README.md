@@ -36,7 +36,7 @@ the genertaed ssh key should be add to the github account through Account settin
  ![alt text](https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project/blob/main/git%20clone.png)
 
 ```
-git clone git@github.com:AhmetAktoprak/CI-CD-Pipeline-Project.git
+git clone https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project
 ```
 ### make all 
  ![alt text](https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project/blob/main/make%20all%20passed.png)
