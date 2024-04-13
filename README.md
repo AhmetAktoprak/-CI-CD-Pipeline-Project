@@ -33,8 +33,42 @@ cat ~/.ssh/id_rsa.pub
 the genertaed ssh key should be add to the github account through Account settings then ssh and GPG key 
 
  ### 3-Clone the project from Github
- ![alt text]()
+ ![alt text](https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project/blob/main/git%20clone.png)
 
 ```
 git clone git@github.com:AhmetAktoprak/CI-CD-Pipeline-Project.git
 ```
+### make all 
+ ![alt text](https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project/blob/main/make%20all%20passed.png)
+
+## CI - CD
+### git hub action test 
+ ![alt text](https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project/blob/main/github%20actions.png)
+
+### Project running on Azure App Service
+ ![alt text](https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project/blob/main/webapp%20page.png)
+
+### link My Agent with the VM
+ ![alt text](https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project/blob/main/my%20agent.png)
+
+
+### Successful deploy of the project in Azure Pipelines
+ ![alt text](https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project/blob/main/pipeline.png)
+
+
+### Running Azure App Service from Azure Pipelines automatic deployment
+ ![alt text](https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project/blob/main/pipeline%20screen.png)
+
+
+ ### locust log 
+![alt text](https://github.com/AhmetAktoprak/CI-CD-Pipeline-Project/blob/main/locust%20log.png)
+
+
+
+## Enhancements
+
+make it in way that keep it an up to date project, in case someone tried to use it a year later will be able without facing issues 
+
+## Demo 
+
+[A Link](https://youtu.be/HCBGQdPL3tY?si=fHM8ZdYU4hLCMLBp) to Screencast on YouTube   
